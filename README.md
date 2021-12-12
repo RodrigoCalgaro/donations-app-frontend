@@ -15,7 +15,7 @@ Para servir la app, desde una terminal en la carpeta del proyecto, ejecutar `ng 
 
 ## Deployment
 
-Se compiló el proyecto para producción ejecutando `ng build` y se publicó el contenido de la carpeta `dist/` en un servidor Nginx alojado en una EC2 Instance de AWS disponible en [http://](http://).
+Se compiló el proyecto para producción ejecutando `ng build` y se publicó el contenido de la carpeta `dist/` en un servidor Nginx alojado en una EC2 Instance de AWS disponible en [http://ec2-18-233-166-199.compute-1.amazonaws.com](http://ec2-18-233-166-199.compute-1.amazonaws.com).
 
 
 ## Demo
