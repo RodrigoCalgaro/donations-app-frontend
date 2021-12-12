@@ -1,0 +1,12 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.nav-item{
+  color: #c2185b;
+  font-size: 80%;
+}
+
+mat-toolbar {
+  box-shadow: 0 0 15px #000;
+}

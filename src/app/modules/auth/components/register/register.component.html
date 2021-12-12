@@ -1,0 +1,69 @@
+<div class="body background">
+    <div class="login">
+        <mat-card class="container">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div>
+                    <img src="/assets/images/login.png" width="23%" alt="">
+                </div>
+
+                <br>
+                
+                <div style="margin: 0 20px;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="ancho" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input matInput formControlName="name" ngAutofocus>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="ancho" appearance="outline">
+                                <mat-label>Surname</mat-label>
+                                <input matInput formControlName="surname" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <mat-form-field class="ancho" appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email" >
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="ancho" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-pressed]="hide" type="button">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="ancho" appearance="outline">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput [type]="hide ? 'password' : 'text'" formControlName="passwordConfirm">
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-pressed]="hide" type="button">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <br>
+
+                <button type="submit" mat-raised-button color="primary" class="ancho" style="height: 50px;"
+                    [disabled]="form.invalid">Sign Up</button>
+                <a class="text-light" type="button" style="margin-top: 10px;" routerLink="/">Continue without log in</a>
+                <hr>
+                <a class="btn text-light" type="button" routerLink="/signin">Already have an account? Sign In!</a>
+            </form>
+        </mat-card>
+    </div>
+</div>

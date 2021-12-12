@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 text-light mt-4 text-justify">
+            <h1><b>Please, help us to achieve our goal!</b></h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum error quam, corrupti earum beatae
+            voluptatem quaerat nemo eveniet odio est. Atque numquam iure mollitia alias aliquid fuga voluptatum voluptas
+            in!
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 donations-column">
+            <div class="mat" matTooltip="{{  collect?.stillNeeded | currency }} still needed for this project"
+                matTooltipPosition="above" matTooltipClass="balloon">
+
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" [attr.style]="widthStyle"
+                        [attr.aria-valuenow]="collect?.percentageRaised" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <b class="text-danger">Only {{ collect?.remainingDays }} days left</b> to fund this project.
+                        </h4>
+                        <p class="card-text">
+                            Join the <b>{{ collect?.totalDonors }}</b> other donors who have already supported this
+                            project. Every dollar helps.
+                        </p>
+
+                        <mat-spinner *ngIf="loading" diameter="30" class="spinner"></mat-spinner>
+
+                        <div *ngIf="!loading">
+                            <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                                <div class="row">
+                                    <div class="col-md-6 mt-1">
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="addon">$</span>
+                                            <input class="form-control text-end"  aria-describedby="addon"
+                                                type="number" [min]="minDonationAllowed" step="0.01"
+                                                formControlName="amount" ngAutofocus required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mt-1">
+                                        <button type="submit" class="btn btn-success" style="width: 100%;">Give
+                                            Now</button>
+                                    </div>
+                                </div>
+                                <div *ngIf="form.invalid" id="validationFeedback" class="text-danger mt-2">
+                                    Amount is required and must be higher than {{ minDonationAllowed | currency }}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

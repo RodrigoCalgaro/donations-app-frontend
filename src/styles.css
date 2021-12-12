@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.background {
+    min-height: 100%;
+    min-width: 100%;
+    background-image: linear-gradient(to right, rgb(12, 0, 80) ,rgb(57, 0, 104));
+}
+
+.balloon {
+    font-size: 16px;
+    border-color: black;
+    min-width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  background-color: rgba(100, 148, 237, 0.15);
+}
+
+mat-paginator {
+  background-color: rgba(100, 148, 237, 0.15);
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+.margin {
+    margin: 30px 5%;
+}

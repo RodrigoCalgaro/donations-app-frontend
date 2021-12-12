@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <div *ngIf="isAdmin">
+    <a class="nav-item" routerLink="/" style="margin-left: 30px;">Home</a>
+    <a class="nav-item" routerLink="/admin/collect" style="margin-left: 30px;">Config. Collect</a>
+    <a class="nav-item" routerLink="/admin/donations" style="margin-left: 30px;">Donations</a>
+  </div>
+  <span class="example-spacer"></span>
+  <div *ngIf="!user">
+    <button mat-button color="primary" routerLink="/signin" style="margin-right: 10px;">Sign In</button>
+    <button mat-raised-button color="primary" routerLink="/signup" style="margin-right: 20px;">Sign Up</button>
+  </div>
+  <div *ngIf="user">
+    <span class="nav-item">{{ user.email }}</span>
+    <button mat-icon-button color="primary" aria-label="Log Out" (click)="logout()" matTooltip="Log Out"> 
+      <mat-icon>logout</mat-icon>
+  </button>
+  </div>
+</mat-toolbar>

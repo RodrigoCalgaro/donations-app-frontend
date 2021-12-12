@@ -1,27 +1,29 @@
-# DonationsAppFrontend
+# Donations App Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+Proyecto desarrollado con [Angular CLI](https://github.com/angular/angular-cli) versión 13.0.4.
 
-## Development server
+Se utilizó adicionalmente componentes del módulo [Angular Material](https://material.angular.io/), la hoja de estilos de [Bootstrap](https://getbootstrap.com/) y [ngx-toastr](https://www.npmjs.com/package/ngx-toastr) para las notificaciones.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Restaurar Dependencias
 
-## Code scaffolding
+Para restaurar las dependencias del proyecto abrir una terminal en la carpeta del proyecto y ejecutar `npm install`. Es necesario tener previamente instalado Node.js y npm. 
+ 
+## Servidor de desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para servir la app, desde una terminal en la carpeta del proyecto, ejecutar `ng serve` o `npm start`, una vez compilada se puede visualizar la app en `http://localhost:4200/`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment
 
-## Running unit tests
+Se compiló el proyecto para producción ejecutando `ng build` y se publicó el contenido de la carpeta `dist/` en un servidor Nginx alojado en una EC2 Instance de AWS disponible en [http://](http://).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Demo
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+La aplicación consiste en una single page para la realización de una colecta en la que para poder efectuar las donaciones un usuario debe estar previamente loggeado en el sistema. 
 
-## Further help
+![demo](demo.gif)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si se ingresa con un usuario administrador se puede configurar los parámetros de la collecta como así también visualizar las donaciones realizadas ordenandolas por determinada columna o filtrando por usuario.
+
+![demo-admin](demo-admin.gif) 

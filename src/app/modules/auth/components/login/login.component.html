@@ -1,0 +1,33 @@
+<div class="body background">
+    <div class="login">
+        <mat-card class="container">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div>
+                    <img src="/assets/images/login.png" width="46%" alt="">
+                </div>
+
+                <br>
+                
+                <mat-form-field class="ancho" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" ngAutofocus>
+                </mat-form-field>
+                <mat-form-field class="ancho" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-pressed]="hide" type="button">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+
+                <br>
+
+                <button type="submit" mat-raised-button color="primary" class="ancho" style="height: 50px;"
+                    [disabled]="form.invalid">Sign In</button>
+                <a class="text-light" type="button" style="margin-top: 10px;" routerLink="/">Continue without log in</a>
+                <hr>
+                <a class="btn text-light" type="button" routerLink="/signup">Don't have an account? Sign Up!</a>
+            </form>
+        </mat-card>
+    </div>
+</div>
